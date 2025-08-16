@@ -1,4 +1,6 @@
 ---
+import Footer from '../components/Footer.astro';
+
 interface Props {
   title: string;
 }
@@ -23,7 +25,10 @@ const { title } = Astro.props;
   <body>
     <header class="bg-bg-element p-4">
       <nav>
-        <a href="/">Home</a> | <a href="/methodology">Methodology</a> | <a href="/explorer">Explorer</a> | <a href="/changelog">Changelog</a>
+        <a href={import.meta.env.BASE_URL}>Home</a> | 
+        <a href={import.meta.env.BASE_URL + "/methodology"}>Methodology</a> | 
+        <a href={import.meta.env.BASE_URL + "/explorer"}>Explorer</a> | 
+        <a href={import.meta.env.BASE_URL + "/changelog"}>Changelog</a>
       </nav>
     </header>
     <main>

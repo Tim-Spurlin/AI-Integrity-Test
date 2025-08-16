@@ -4,8 +4,8 @@ import preact from '@astrojs/preact';
 export default defineConfig({
   integrations: [preact()],
   output: 'static',
-  site: 'https://yourusername.github.io/ai-integrity-test',
-  base: '/ai-integrity-test',
+  site: 'https://Tim-Spurlin.github.io',
+  base: '/AI-Integrity-Test',
   build: {
     format: 'file',
   },

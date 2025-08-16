@@ -3,7 +3,7 @@ use wasm_bindgen::prelude::*;
 #[wasm_bindgen]
 pub fn derive_tags(input: &str) -> JsValue {
   let tags: Vec<String> = input.split_whitespace().map(|s| s.to_string()).collect();
-  JsValue::from_serde(&tags).unwrap()
+  serde_wasm_bindgen::to_value(&tags).unwrap()
 }
 
 #[wasm_bindgen]

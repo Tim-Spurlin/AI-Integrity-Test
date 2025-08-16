@@ -12,26 +12,28 @@
     "generate-diagrams": "ts-node scripts/generate-diagrams.ts"
   },
   "dependencies": {
-    "astro": "^4.13.1",
     "@astrojs/preact": "^3.5.0",
+    "ajv": "^8.17.1",
+    "astro": "^4.13.1",
+    "mermaid": "^10.9.1",
     "preact": "^10.23.1",
     "tailwindcss": "^3.4.7",
-    "ajv": "^8.17.1",
-    "zod": "^3.23.8",
-    "mermaid": "^10.9.1"
+    "zod": "^3.23.8"
   },
   "devDependencies": {
-    "vitest": "^2.0.5",
-    "playwright": "^1.46.1",
-    "eslint": "^9.9.0",
+    "@types/node": "^24.3.0",
     "@typescript-eslint/eslint-plugin": "^8.0.1",
     "@typescript-eslint/parser": "^8.0.1",
+    "autoprefixer": "^10.4.21",
+    "axe-core": "^4.10.0",
+    "eslint": "^9.9.0",
+    "lighthouse": "^12.2.0",
+    "playwright": "^1.46.1",
+    "postcss": "^8.4.41",
     "stylelint": "^16.8.1",
     "stylelint-config-standard": "^36.0.1",
-    "axe-core": "^4.10.0",
-    "lighthouse": "^12.2.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4",
-    "postcss": "^8.4.41"
+    "vitest": "^2.0.5"
   }
 }
