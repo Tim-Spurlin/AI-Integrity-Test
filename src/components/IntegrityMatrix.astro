@@ -1,0 +1,29 @@
+---
+import type { Observation } from '../types/integrity';
+import { withDerivedTags } from '../lib/derive';
+
+interface Props {
+  observations: Observation[];
+}
+
+const { observations } = Astro.props as Props;
+const rows = observations.map(withDerivedTags);
+---
+<table class="min-w-full text-left">
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>Outcome</th>
+      <th>Tags</th>
+    </tr>
+  </thead>
+  <tbody>
+    {rows.map(row => (
+      <tr>
+        <td>{row.model}</td>
+        <td>{row.outcome}</td>
+        <td>{row.tags.join(', ')}</td>
+      </tr>
+    ))}
+  </tbody>
+</table>
