@@ -1,0 +1,12 @@
+---
+interface Props {
+  model: any;
+}
+const { model } = Astro.props;
+---
+
+<div class="bg-bg-element p-4 rounded">
+  <h2>{model.model}</h2>
+  <p>Outcome: {model.outcome}</p>
+  <button onclick="openModal()">Details</button>
+</div>

@@ -1,0 +1,27 @@
+---
+import { IntegritySchema } from '../types/integrity';
+import data from '../../data/integrity-test.json';
+const observations = data.observations;
+
+---
+
+<table class="w-full border-collapse">
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>Vendor</th>
+      <th>Claims Memory</th>
+      <th>Outcome</th>
+    </tr>
+  </thead>
+  <tbody>
+    {observations.map((obs) => (
+      <tr>
+        <td>{obs.model}</td>
+        <td>{obs.vendor}</td>
+        <td>{obs.claims_memory ? 'Yes' : 'No'}</td>
+        <td class={obs.outcome === 'honest' ? 'text-integrity-honest' : 'text-integrity-lied'}>{obs.outcome}</td>
+      </tr>
+    ))}
+  </tbody>
+</table>

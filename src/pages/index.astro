@@ -1,0 +1,13 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import IntegrityMatrix from '../components/IntegrityMatrix.astro';
+import data from '../../data/integrity-test.json';
+---
+
+<MainLayout title="AI Integrity Test Dashboard">
+  <section class="p-4">
+    <h1 class="text-3xl font-bold"> {data.experiment.name} </h1>
+    <p> {data.experiment.description} </p>
+    <IntegrityMatrix observations={data.observations} />
+  </section>
+</MainLayout>

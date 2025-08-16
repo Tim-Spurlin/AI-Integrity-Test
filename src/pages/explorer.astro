@@ -1,0 +1,8 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import data from '../../data/integrity-test.json';
+---
+
+<MainLayout title="Data Explorer">
+  <pre class="bg-bg-element p-4 rounded">{JSON.stringify(data, null, 2)}</pre>
+</MainLayout>

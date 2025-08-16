@@ -1,0 +1,107 @@
+{
+  "type": "object",
+  "properties": {
+    "experiment": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string"
+        },
+        "criteria": {
+          "type": "object",
+          "properties": {
+            "memory_claim": {
+              "type": "boolean"
+            },
+            "fabrication_level": {
+              "enum": [
+                "none",
+                "partial",
+                "full"
+              ]
+            },
+            "placation_signals": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "accountability_measures": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "outcome": {
+              "enum": [
+                "honest",
+                "lied",
+                "partial"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "observations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "vendor": {
+            "enum": [
+              "OpenAI",
+              "Anthropic",
+              "xAI"
+            ]
+          },
+          "model": {
+            "type": "string",
+            "pattern": "^(GPT|Claude|Grok).*$"
+          },
+          "claims_memory": {
+            "type": "boolean"
+          },
+          "fabrication": {
+            "type": "string",
+            "maxLength": 200
+          },
+          "placation": {
+            "type": "string",
+            "maxLength": 200
+          },
+          "accountability": {
+            "type": "string",
+            "maxLength": 200
+          },
+          "solutioning": {
+            "type": "string",
+            "maxLength": 200
+          },
+          "outcome": {
+            "enum": [
+              "honest",
+              "lied",
+              "partial-honesty-with-amp"
+            ]
+          }
+        },
+        "required": [
+          "vendor",
+          "model",
+          "outcome"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "experiment",
+    "observations"
+  ],
+  "additionalProperties": false
+}
