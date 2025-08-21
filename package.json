@@ -26,7 +26,7 @@
     "stylelint": "15.10.3",
     "stylelint-config-standard": "34.0.0",
     "typescript": "5.4.5",
-    "vitest": "1.5.1",
+    "vitest": "1.6.1",
     "ts-node": "10.9.2",
     "tailwindcss": "3.4.1",
     "postcss": "8.4.38",
