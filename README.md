@@ -11,17 +11,17 @@ Requirements:
 ### Install
 
 ```bash
-npm install
+pnpm install
 ```
 
 ### Validate Data
 
 ```bash
-npm run validate
+pnpm run validate
 ```
 
 ### Tests
 
 ```bash
-npm test
+pnpm test
 ```
